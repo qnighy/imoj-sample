@@ -1,0 +1,46 @@
+\documentclass[10pt,a4j,notitlepage,uplatex]{jsarticle}
+\title{Transfer the numbers}
+
+\begin{document}
+\section{課題}
+
+プレイヤー$A$に非負整数$A, B$が与えられる。$A, B$をプレイヤー$B$に伝えるプログラムを作成せよ。
+
+\section{関数}
+
+\texttt{playerA}と\texttt{playerB}の二つのソースプログラムを実装せよ。これらのプログラムは、グローバル変数などを用いて直接やりとりを行ってはいけない。関数の外で変数を宣言する場合や、実装しなければいけない関数以外の関数を定義する場合は、\texttt{static}を付けること。
+
+\texttt{playerA}には関数\texttt{void playerA(int A, int B)}を実装しなければならない。
+
+\texttt{playerA}は関数\texttt{void send(int b)}を高々$40$回呼び出すことができる。$b$は$0$か$1$のいずれかでなければならない。
+
+\texttt{playerB}には関数\texttt{void playerB(int N, int data[])}を実装しなければならない。$N$は\texttt{send}が呼び出された回数である。配列\texttt{data}には\texttt{send}に渡された$b$の値が入っている。
+
+\texttt{playerB}は関数\texttt{void answer(int X, int Y)}を呼び出さなければならない。\texttt{answer}が呼ばれると、プログラムは終了する。$X = A, \ Y = B$のとき、正解となる。
+
+
+\section{制約}
+
+全ての入力は次の制約を満たす。
+\begin{itemize}
+  \item $0 \leq A$
+  \item $0 \leq B$
+  \item $A + B < 2 \times 10^{6}$
+\end{itemize}
+
+\section{小課題}
+
+\subsection{小課題1 (50点)}
+
+この小課題に対する入力は次の制約を満たす。
+\begin{itemize}
+  \item $0 \leq A$
+  \item $0 \leq B$
+  \item $A + B < 10^{6}$
+\end{itemize}
+
+\subsection{小課題2 (50点)}
+
+追加の制約はない。
+
+\end{document}

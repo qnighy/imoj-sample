@@ -1,0 +1,42 @@
+\documentclass[10pt,a4j,notitlepage,uplatex]{jsarticle}
+\title{Guess the number}
+
+\begin{document}
+\section{課題}
+
+正の整数$N$が与えられる。関数\texttt{guess}を用いて、整数$K$の値を当てよ。
+
+\section{関数}
+
+ユーザーは関数\texttt{void game(int N)}を実装しなければならない。
+
+\texttt{game}は関数\texttt{int guess(int value)}を高々$100$回呼び出すことができる。
+
+\begin{itemize}
+  \item \texttt{value}が$K$より小さいとき、\texttt{guess}は$-1$を返す。
+  \item \texttt{value}が$K$より大きいとき、\texttt{guess}は$-1$を返す。
+  \item \texttt{value}が$K$と等しいとき、\texttt{guess}は値を返さずにプログラムを終了する。
+\end{itemize}
+
+\section{制約}
+
+全ての入力は次の制約を満たす。
+\begin{itemize}
+  \item $1 \leq N \leq 10^{8}$
+  \item $0 \leq K < N$
+\end{itemize}
+
+\section{小課題}
+
+\subsection{小課題1 (50点)}
+
+この小課題に対する入力は次の制約を満たす。
+\begin{itemize}
+  \item $1 \leq N \leq 100$
+\end{itemize}
+
+\subsection{小課題2 (50点)}
+
+追加の制約はない。
+
+\end{document}

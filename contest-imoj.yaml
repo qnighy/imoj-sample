@@ -1,0 +1,40 @@
+name: "imoj-sample"
+description: "Imojudge-format test contest"
+token_mode: disabled
+# start: 946652400 # 2000/01/01 00:00:00
+# stop:  946670400 # 2000/01/01 05:00:00
+start: 1388502000 # 2014/01/01 00:00:00 (JST)
+stop:  1420038000 # 2015/01/01 00:00:00 (JST)
+languages: ["c", "cpp"]
+tasks:
+  - name: "aplusb"
+    dir: "aplusb"
+    title: "A + B problem"
+    time_limit: 1.0
+    memory_limit: 256
+    min_submission_interval: 60
+    min_user_test_interval: 60
+  - name: "guess"
+    dir: "guess"
+    title: "Guess the number"
+    task_type: Communication
+    time_limit: 1.0
+    memory_limit: 256
+    min_submission_interval: 60
+    min_user_test_interval: 60
+  - name: "transfer"
+    dir: "transfer"
+    title: "Transfer the numbers"
+    task_type: Communication2
+    submission_format:
+      - "playerA.%l"
+      - "playerB.%l"
+    time_limit: 1.0
+    memory_limit: 256
+    min_submission_interval: 60
+    min_user_test_interval: 60
+users:
+  - username: "u1"
+    password: "u1"
+  - username: "u2"
+    password: "u2"
